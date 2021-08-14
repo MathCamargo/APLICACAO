@@ -7,7 +7,7 @@ import requests
 hr_postar = 21
 min_postar = 40
 
-# CONFIGURAÇÃO TWEEPY #
+# CONFIGURAÇÃO TWEEPY #a
 api_key = environ['api_key']
 api_secret_key = environ['api_secret_key']
 acess_key = environ['acess_key']
