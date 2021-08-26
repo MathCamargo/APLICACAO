@@ -44,25 +44,37 @@ while True:
             frase = f'Ainda temos {Ferias} dias de férias. O ENPE 2021/1 se inicia em 16 de Agosto de 2021.'
             api.update_status(frase)
             print()
-            print('Atualizado em {}.'.format(data_formatada))
+            print(f'Atualizado em {data_formatada}.')
+            sleep(60)
+
+        elif Ferias > 0 and DiasAula > 0:
+            frase = f'Curtam o recesso! O semestre está {Porcentagem}% completo.'
+            api.update_status(frase)
+            print(f'Atualizado em {data_formatada}')
+            sleep(60)
+        
+        elif Ferias == 0 and DiasAula == 84:
+            frase = f'Tudo que é bom dura pouco :/... Semestre volta com tudo amanhã! Ele ja está {Porcentagem}% completo.'
+            api.update_status(frase)
+            print(f'Atualizado em {data_formatada}')
             sleep(60)
 
         elif Ferias == 0 and DiasAula == 0:
             frase = f'As aulas do ENPE 2021/1 começam amanhã! tenham todos um ótimo semestre!'
             api.update_status(frase)
-            print('Atualizado em {}'.format(data_formatada))
+            print(f'Atualizado em {data_formatada}')
             sleep(60)
         
         elif DiasAula > 0:
             frase = f'Já completamos {DiasAula} dias de aula no ENPE 2021/1, completando {Porcentagem}% do total.'
             api.update_status(frase)
-            print('Atualizado em {}'.format(data_formatada))
+            print(f'Atualizado em {data_formatada}')
             sleep(60)
         
         elif DiasAula == TotalDiasAula:
             frase = f'O ENPE 2021/1 está 100% completo.'
             api.update_status(frase)
-            print('Atualizado em {}'.format(frase))
+            print(f'Atualizado em {data_formatada}')
             exit()
     else:
         print('------ Nada a atualizar ------')
